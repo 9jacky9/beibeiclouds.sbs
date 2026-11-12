@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、IPv4 地址荒与 NAT 穿透在 P2P 通信中的战略价值</h2>
-        <p>在当今企业跨国远程桌面、音视频实时会议及分布式协作工具中，两端设备绝大多数位于各自的局域网NAT网关之后，不具备直接可寻址的公网IP。若所有通信流量都强制经由海外云端服务器进行中心化中继，不仅会产生昂贵的跨洋流量带宽账单，更会增加两倍的端到端往返时延。许多跨国软件架构师在设计<a href="https://dajichang.mom/" target="_blank" style="color:#818cf8; font-weight:700; text-decoration:underline;">海外网络加速方案</a>时，高度重视网络环境对P2P打洞协议的友好度，力求在端与端之间建立直接的通信捷径。</p>
+        <p>在当今企业跨国远程桌面、音视频实时会议及分布式协作工具中，两端设备绝大多数位于各自的局域网NAT网关之后，不具备直接可寻址的公网IP。若所有通信流量都强制经由海外云端服务器进行中心化中继，不仅会产生昂贵的跨洋流量带宽账单，更会增加两倍的端到端往返时延。许多跨国软件架构师在设计<a href="https://dajichang.mom/" target="_blank" style="color:#818cf8; font-weight:700; text-decoration:underline;">点对点通信优化方案</a>时，高度重视网络环境对P2P打洞协议的友好度，力求在端与端之间建立直接的通信捷径。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、NAT 四大分类对打洞成功率的决定性影响</h2>
         <p>依据网关映射逻辑，NAT被严谨划分为全锥型(Full Cone)、受限锥型(Restricted Cone)、端口受限锥型(Port-Restricted Cone)及对称型(Symmetric)。其中全锥型最为宽松，任何外部IP均可向映射端口发送数据；而在最为严苛的对称型NAT下，针对不同外部目标IP会随机分配不同端口，导致传统打洞握手瞬间失效，必须被迫回落至昂贵的TURN中继模式。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、STUN / TURN / ICE 协议簇协同工作原理解析</h2>

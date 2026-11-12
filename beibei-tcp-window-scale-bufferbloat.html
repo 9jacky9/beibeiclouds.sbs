@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、跨洋长肥网络(LFN)的物理特性与 TCP 原始瓶颈</h2>
-        <p>在计算机网络定义中，当一条通信链路的带宽延迟积(BDP = 带宽 × 往返RTT)极大时，该网络被称为长肥网络(Long Fat Network)。以中美跨洋千兆专线为例，150毫秒的时延意味着管道中可同时容纳近20MB在途数据。然而原始TCP协议头中窗口字段仅占16位，最大仅支持64KB滑动窗口，直接导致即便物理带宽再大也无法被充分利用。许多追求极限性能的极客在选配<a href="https://dajichang.mom/" target="_blank" style="color:#818cf8; font-weight:700; text-decoration:underline;">国际高速网络通道</a>时，首要关注的就是协议栈对现代长肥网络参数的优化成熟度。</p>
+        <p>在计算机网络定义中，当一条通信链路的带宽延迟积(BDP = 带宽 × 往返RTT)极大时，该网络被称为长肥网络(Long Fat Network)。以中美跨洋千兆专线为例，150毫秒的时延意味着管道中可同时容纳近20MB在途数据。然而原始TCP协议头中窗口字段仅占16位，最大仅支持64KB滑动窗口，直接导致即便物理带宽再大也无法被充分利用。许多追求极限性能的极客在选配<a href="https://dajichang.mom/" target="_blank" style="color:#818cf8; font-weight:700; text-decoration:underline;">长肥管道性能调谐</a>时，首要关注的就是协议栈对现代长肥网络参数的优化成熟度。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、RFC 1323 TCP Window Scale 选项与内核调谐</h2>
         <p>为了突破64KB窗口上限，RFC 1323标准引入了TCP Window Scale(窗口缩放因子)选项，允许将窗口大小最高放大至1GB。在Linux系统内核参数中，通过开启net.ipv4.tcp_window_scaling=1，并精细配置net.ipv4.tcp_rmem与tcp_wmem的接收/发送缓冲区范围，能够让TCP连接依据实时链路BDP动态扩张滑动窗口，彻底释放跨洋物理光纤的全部线速吞吐潜能。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、缓冲区膨胀(Bufferbloat)的成因与毁灭性危害</h2>

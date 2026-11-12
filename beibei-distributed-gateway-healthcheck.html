@@ -46,7 +46,7 @@
       <section style="font-size:15px; line-height:1.85; color:#d1d5db;">
         
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">一、大规模分布式跨国网络的单点故障脆弱性</h2>
-        <p>在横跨五大洲的分布式网络拓扑中，任何一段陆地光缆工程施工、海底光缆地震切断或边界BGP路由震荡，都会引发局部的网络黑洞或时延剧增。如果服务架构依赖静态路由配置或迟钝的人工排查，短暂的故障便会演化为长时间的业务中断。许多在可用性上具备苛刻要求的企业级客户在查阅<a href="https://dajichang.mom/" target="_blank" style="color:#818cf8; font-weight:700; text-decoration:underline;">跨境专线选型指南</a>时，将服务商是否拥有自主可控的分布式自动化健康巡检与毫秒级权重自愈能力列为首要评估标准。</p>
+        <p>在横跨五大洲的分布式网络拓扑中，任何一段陆地光缆工程施工、海底光缆地震切断或边界BGP路由震荡，都会引发局部的网络黑洞或时延剧增。如果服务架构依赖静态路由配置或迟钝的人工排查，短暂的故障便会演化为长时间的业务中断。许多在可用性上具备苛刻要求的企业级客户在查阅<a href="https://dajichang.mom/" target="_blank" style="color:#818cf8; font-weight:700; text-decoration:underline;">自动化容灾路由网络</a>时，将服务商是否拥有自主可控的分布式自动化健康巡检与毫秒级权重自愈能力列为首要评估标准。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">二、高频轻量化健康度探测矩阵设计</h2>
         <p>实现毫秒级自愈的前提是构建覆盖全网的敏锐嗅觉网络。分布式边缘接入网关在每个POP点部署了轻量级探针守护进程，以数十毫秒为周期向全球核心机房并发发送定制的ICMP/TCP SYN轻量化探测探针，全天候采集双向往返时延(RTT)、时延方差(Jitter)及滑动窗口丢包率数据。探针经过特殊协议封装，避免了对业务带宽的不必要挤占，达成了极高的检测信噪比。</p>
         <h2 style="font-size:19px; color:#fff; margin:24px 0 10px; font-weight:700;">三、基于平滑加权轮询算法的动态权重决策引擎</h2>
